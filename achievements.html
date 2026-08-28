@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنجازات الطلاب | مدرسة المتفوقين الأولى باللاذقية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E4D45',
+            dark: '#07352F',
+            gold: { DEFAULT: '#DCA852', light: '#E5B65B', dark: '#B88432' },
+            soft: '#F4F7F5',
+            secondary: '#1A6B60',
+            accent: '#C82B28'
+          },
+          boxShadow: { premium: '0 10px 25px -5px rgba(7, 53, 47, 0.1)' },
+          fontFamily: { arabic: ['Cairo', 'sans-serif'], english: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // أزرار الفلترة والأقسام
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const baccalaureateSection = document.querySelector('.baccalaureate-section');
+      const preparatorySection = document.querySelector('.preparatory-section');
+      const olympiadSection = document.querySelector('.olympiad-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          // تغيير تنسيق الأزرار عند الضغط
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white');
+            b.classList.add('bg-soft', 'text-dark');
+          });
+          this.classList.remove('bg-soft', 'text-dark');
+          this.classList.add('bg-primary', 'text-white');
+
+          const filter = this.getAttribute('data-filter');
+
+          // إظهار وإخفاء الأقسام بناءً على الزر المحدد
+          if (filter === 'all') {
+            baccalaureateSection.style.display = 'block';
+            preparatorySection.style.display = 'block';
+            olympiadSection.style.display = 'block';
+          } else if (filter === 'baccalaureate') {
+            baccalaureateSection.style.display = 'block';
+            preparatorySection.style.display = 'none';
+            olympiadSection.style.display = 'none';
+          } else if (filter === 'preparatory') {
+            baccalaureateSection.style.display = 'none';
+            preparatorySection.style.display = 'block';
+            olympiadSection.style.display = 'none';
+          } else if (filter === 'olympiad') {
+            baccalaureateSection.style.display = 'none';
+            preparatorySection.style.display = 'none';
+            olympiadSection.style.display = 'block';
+          }
+        });
+      });
+    });
+
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ticker-move {
+      display: flex;
+      width: max-content;
+      animation: marquee-rtl 30s linear infinite;
+    }
+
+    .ticker-wrap:hover .ticker-move {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-rtl {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(50%);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-soft text-dark flex flex-col min-h-screen font-arabic">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.jpg" alt="شعار مدرسة المتفوقين" class="h-20 w-auto object-contain"
+          onerror="this.src='https://via.placeholder.com/150x80/0E4D45/FFFFFF?text=Logo'">
+        <div>
+          <h1 class="text-primary font-bold text-sm sm:text-base lg:text-xl leading-tight">
+            مدرسة المتفوقين الأولى باللاذقية
+          </h1>
+          <h2 class="hidden sm:block text-gray-500 font-english text-[10px] lg:text-xs uppercase tracking-wider">
+            The First School for Outstanding Students
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-5 text-sm font-bold text-dark">
+        <a href="index.html" class="hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-secondary transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="text-secondary border-b-2 border-secondary pb-1">الإنجازات</a>
+        <a href="contact.html" class="hover:text-secondary transition-colors">تواصل معنا</a>
+      </nav>
+      <button id="mobile-menu-btn" class="xl:hidden text-primary p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t flex flex-col shadow-premium absolute w-full z-50">
+      <div class="flex flex-col gap-2 p-4 font-bold text-dark">
+        <a href="index.html" class="block py-2 border-b border-gray-50">الرئيسية</a>
+        <a href="about.html" class="block py-2 border-b border-gray-50">عن المدرسة</a>
+        <a href="teachers.html" class="block py-2 border-b border-gray-50">الكادر التدريسي</a>
+        <a href="activities.html" class="block py-2 border-b border-gray-50">النشاطات</a>
+        <a href="volunteer.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="text-secondary border-b-2 border-secondary pb-1">الإنجازات</a>
+        <a href="contact.html" class="block py-2 border-b border-gray-50">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- الشريط الإخباري المتكرر -->
+  <div class="bg-dark text-white flex items-center h-10 overflow-hidden text-sm">
+    <div
+      class="bg-gold px-4 py-2 font-bold whitespace-nowrap h-full flex items-center z-10 shadow-[2px_0_10px_rgba(0,0,0,0.2)]">
+      آخر الأخبار</div>
+    <div class="flex-1 ticker-wrap h-full flex items-center bg-[#05302c]">
+      <div class="ticker-move">
+        <!-- النسخة الأولى من الأخبار -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+
+        <!-- النسخة الثانية (مكررة بالضبط لسد الفراغ وجعل الحركة متصلة) -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            الياسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="flex-grow">
+
+    <!-- Header Banner -->
+    <section class="bg-primary text-white py-12 relative">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-3">لوحة إنجازات الطلاب</h1>
+        <p class="text-gold-light text-lg md:text-base max-w-xl mx-auto">مجموعة من الطلاب المتفوقين في مختلف المجالات
+          العلمية</p>
+      </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 flex justify-center gap-3 flex-wrap">
+        <button
+          class="filter-btn active bg-primary text-white md:hover:bg-gray-200 px-6 py-2 rounded-full font-bold text-sm shadow transition"
+          data-filter="all">جميع الإنجازات</button>
+        <button
+          class="filter-btn bg-soft md:hover:bg-gray-200 text-dark px-6 py-2 rounded-full font-bold text-sm transition"
+          data-filter="baccalaureate">الشهادة الثانوية العامة</button>
+        <button
+          class="filter-btn bg-soft md:hover:bg-gray-200 text-dark px-6 py-2 rounded-full font-bold text-sm transition"
+          data-filter="preparatory">شهادة التعليم الاساسي</button>
+        <button
+          class="filter-btn bg-soft md:hover:bg-gray-200 text-dark px-6 py-2 rounded-full font-bold text-sm transition"
+          data-filter="olympiad">الأولمبياد العلمي</button>
+      </div>
+    </section>
+
+    <!-- Students Grid -->
+    <section class="py-12">
+      <div class="container mx-auto px-4 max-w-7xl">
+
+        <!-- ================= Section 1: الشهادة الثانوية العامة ================= -->
+        <div class="mb-16 baccalaureate-section">
+          <div class="flex items-center gap-4 mb-8 border-b-2 border-gold/30 pb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-primary text-gold flex items-center justify-center text-2xl font-bold shadow-md">
+              🎓</div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-primary">العلامات في شهادة الثانوية العامة</h2>
+              <p class="text-gray-500 text-sm">نخبة من طلابنا الحاصلين على المجموعات التامة وشبه التامة</p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+            <!-- طالب 1: نيكولا تيسير شويط -->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/نيكولا.webp" alt="نيكولا تيسير شويط" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">نيكولا تيسير شويط</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2400 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- طالب 2: يوسف حسن رجب -->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/يوسف_رجب.webp" alt="يوسف حسن رجب" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">يوسف حسن رجب</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2400 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- طالب 3: ريمون الياس خوري-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/ريمون.webp" alt="ريمون الياس خوري" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">ريمون الياس خوري</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2395 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 4: جنى احمد زهوري-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جنى_زهوري.webp" alt="جنى احمد زهوري" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جنى احمد زهوري</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2394 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 5: زين العابدين تمام مكائيل-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/زين.webp" alt="زين العابدين تمام مكائيل"
+                  class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">زين العابدين تمام مكائيل</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2394 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 6: زيد نهاد مشقوق-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="images/youssef.webp" alt="زيد نهاد مشقوق" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">زيد نهاد مشقوق</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2393 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 7: يوسف ماهر حبيب-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="images/youssef.webp" alt="يوسف ماهر حبيب" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">يوسف ماهر حبيب</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2393 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 8: جوي حنا خوري-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جوي.webp" alt="جوي حنا خوري" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جوي حنا خوري</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2392 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 9:شام أيهم يونس-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/شام.webp" alt="شام أيهم يونس" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">شام أيهم يونس</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2391 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 10:ليليت دانييل دررديان-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/ليليت.webp" alt="ليليت دانييل دررديان" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">ليليت دانييل دررديان</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2391 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 11: شهد زيد حلوم-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/شهد.webp" alt="شهد زيد حلوم" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">شهد زيد حلوم</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2388 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 12:على وديع علو-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/على.webp" alt="على وديع علو" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">على وديع علو</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2388 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 13:المى فاطر درويش-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/الما.webp" alt="المى فاطر درويش" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">المى فاطر درويش</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2387 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 14:سارة ثائر محمد-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/سارة.webp" alt="سارة ثائر محمد" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">سارة ثائر محمد</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2387 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 15:غدير درويش جمل-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/غدير.webp" alt="غدير درويش جمل" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">غدير درويش جمل</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2387 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 16:هبة علي شعبان-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/هبة.webp" alt="هبة علي شعبان" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">هبة علي شعبان</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2386 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 17:آلاء تيسير معلا-->
+            <div
+              class="student-card baccalaureate bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/الاء.webp" alt="آلاء تيسير معلا" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الثانوية
+                  العامة</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">آلاء تيسير معلا</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2385 / 2400</p>
+                    <p class="text-xs text-gold-dark font-bold mt-1">الفرع العلمي</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= Section 2: شهادة التعليم الاساسي ================= -->
+        <div class="mb-16 preparatory-section">
+          <div class="flex items-center gap-4 mb-8 border-b-2 border-gold/30 pb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-primary text-gold flex items-center justify-center text-2xl font-bold shadow-md">
+              🎓</div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-primary">العلامات في شهادةالتعليم الاساسي</h2>
+              <p class="text-gray-500 text-sm">نخبة من طلابنا الحاصلين على العلامة التامة وشبه التامة </p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+            <!--طالب 1 : جوليا فراس ديوب-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جوليا.webp" alt="جوليا فراس ديوب" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جوليا فراس ديوب</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 2 : جود اكرم محمد-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جود.webp" alt="جود اكرم محمد" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جود اكرم محمد</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 3 : جويل رائق ابراهيم-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جويل.webp" alt="جويل رائق ابراهيم" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جويل رائق ابراهيم</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 4 : جنى نادر يوسف -->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/جنى.webp" alt="جنى نادر يوسف" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">جنى نادر يوسف</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 5 : رهف ياسر فيوض-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/رهف.webp" alt="رهف ياسر فيوض" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">رهف ياسر فيوض</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 6 : زينب غسان لايقة-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/زينب.webp" alt="زينب غسان لايقة" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">زينب غسان لايقة</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 7 : شهاب اسامة حداد-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/شهاب.webp" alt="شهاب اسامة حداد" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">شهاب اسامة حداد</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 8 : لين علي سلوم-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/لين.webp" alt="لين علي سلوم" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">لين علي سلوم</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 9 : حسن خيرات متوج-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/حسن_متوج.webp" alt="حسن خيرات متوج" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">حسن خيرات متوج</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 10 : حسن زهير عامودي-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/حسن_عامودي.webp" alt="حسن زهير عامودي" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">حسن زهير عامودي</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 11 : ريما عمار اسماعيل-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/ريما.webp" alt="ريما عمار اسماعيل" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">ريما عمار اسماعيل</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 12 : سيلينا منذر درويش-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/سيلينا.webp" alt="سيلينا منذر درويش" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">سيلينا منذر درويش</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2800 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 13 : حيدر علاء نضوة-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/حيدر.jpg" alt="حيدر علاء نضوة" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">حيدر علاء نضوة</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2799 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 14 : ماروشكا عمار ناصر-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/ماروشكا.webp" alt="ماروشكا عمار ناصر" class="w-full h-full object-cover bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">ماروشكا عمار ناصر</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2799 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 15 : حلا الكميت حموي-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/حلا.webp" alt="حلا الكميت حموي" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">حلا الكميت حموي</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2799 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 16 : علي ناصر ميا-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/علي.webp" alt="علي ناصر ميا" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">علي ناصر ميا</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2799 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--طالب 17 : ماريا زياد حسن-->
+            <div
+              class="student-card preparatory bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 flex flex-col hover:border-gold transition">
+              <div class="h-64 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/ماريا.webp" alt="ماريا زياد حسن" class="w-full h-full object-containS bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+                <span
+                  class="absolute top-3 right-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full shadow">الشهادة
+                  الاعدادية</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="text-lg font-bold text-primary mb-2">ماريا زياد حسن</h3>
+                  <div class="bg-soft border border-gold/40 p-3 rounded-xl">
+                    <p class="text-xs text-gray-500 font-bold mb-1">المجموع الكلي</p>
+                    <p class="text-xl font-bold text-dark font-english">2799 / 2800</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= Section 3: الأولمبياد العلمي السوري ================= -->
+        <div class="mb-12 olympiad-section">
+          <div class="flex items-center gap-4 mb-8 border-b-2 border-gold/30 pb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-gold text-dark flex items-center justify-center text-2xl font-bold shadow-md">
+              🥇</div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-primary">إنجازات الأولمبياد العلمي</h2>
+              <p class="text-gray-500 text-sm">أبطالنا الفائزون في الأولمبياد بمختلف الفروع</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+
+            <!-- ================= علم الأحياء ================= -->
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/farah.webp" alt="فرح عباس" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">فرح عباس</h3>
+                <div class="bg-soft border border-yellow-300 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">علم الأحياء</p>
+                  <p class="text-sm font-bold text-yellow-600">🥇 ذهبية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/hala.webp" alt="حلا غضبان" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">حلا غضبان</h3>
+                <div class="bg-soft border border-gray-300 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">علم الأحياء</p>
+                  <p class="text-sm font-bold text-gray-500">🥈 فضية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/rafeef.webp" alt="رفيف سلهب" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">رفيف سلهب</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">علم الأحياء</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/sham.webp" alt="شام بدور" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">شام بدور</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">علم الأحياء</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= الكيمياء ================= -->
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/abd.webp" alt="عبد الملك عبد العزيز" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">عبد الملك عبد العزيز</h3>
+                <div class="bg-soft border border-gray-300 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الكيمياء</p>
+                  <p class="text-sm font-bold text-gray-500">🥈 فضية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/hamood.webp" alt="احمد حمود" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">احمد حمود</h3>
+                <div class="bg-soft border border-gray-300 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الكيمياء</p>
+                  <p class="text-sm font-bold text-gray-500">🥈 فضية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/npura.webp" alt="نورا خيربك" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">نورا خيربك</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الكيمياء</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= معلوماتية ================= -->
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/asad.webp" alt="أحمد مسعود" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">أحمد مسعود</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">معلوماتية</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/anos.webp" alt="أنس عزوز" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">أنس عزوز</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">معلوماتية</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= الرياضيات ================= -->
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/jamil.webp" alt="جميل شيخ علي" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">جميل شيخ علي</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الرياضيات</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= الفيزياء ================= -->
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/homam.webp" alt="همام مريم" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالب'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">همام مريم</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الفيزياء</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="student-card olympiad bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:border-gold hover:shadow-md transition">
+              <div class="h-40 overflow-hidden bg-gray-100 relative flex items-center justify-center">
+                <img src="assets/rand.webp" alt="رند محمد" class="w-full h-full object-contain bg-gray-50"
+                  onerror="this.src='https://via.placeholder.com/300x300/0E4D45/FFFFFF?text=صورة+الطالبة'">
+              </div>
+              <div class="p-3 flex-1 flex flex-col justify-between text-center">
+                <h3 class="text-sm font-bold text-primary mb-2">رند محمد</h3>
+                <div class="bg-soft border border-orange-200 p-2 rounded-lg">
+                  <p class="text-[10px] text-gray-500 font-bold mb-1">الفيزياء</p>
+                  <p class="text-sm font-bold text-amber-700">🥉 برونزية</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ================= شهادات التقدير ================= -->
+          <div class="mt-12 olympiad-certificates">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-200 pb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-soft text-primary flex items-center justify-center text-xl font-bold border border-gray-200">
+                📜</div>
+              <h3 class="text-xl font-bold text-dark">شهادات التقدير</h3>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+
+              <!-- كيمياء -->
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/shams.webp" alt="شام صالح" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">شام صالح</h3>
+                  <p class="text-[10px] text-secondary font-bold">كيمياء</p>
+                </div>
+              </div>
+
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/fyris.webp" alt="فارس حواط" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">فارس حواط</h3>
+                  <p class="text-[10px] text-secondary font-bold">كيمياء</p>
+                </div>
+              </div>
+
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/mnssa.webp" alt="منسا خيربك" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">منسا خيربك</h3>
+                  <p class="text-[10px] text-secondary font-bold">كيمياء</p>
+                </div>
+              </div>
+
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/shams (2).webp" alt="شمس البب" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">شمس البب</h3>
+                  <p class="text-[10px] text-secondary font-bold">كيمياء</p>
+                </div>
+              </div>
+
+              <!-- رياضيات -->
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/jobran.webp" alt="جبران حاتم" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">جبران حاتم</h3>
+                  <p class="text-[10px] text-secondary font-bold">رياضيات</p>
+                </div>
+              </div>
+
+              <!-- علوم -->
+              <div
+                class="student-card olympiad bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col hover:border-secondary transition">
+                <div class="h-32 overflow-hidden bg-gray-50 relative flex items-center justify-center">
+                  <img src="assets/hamzah.webp" alt="حمزة هلال" class="w-full h-full object-contain bg-gray-50"
+                    onerror="this.src='https://via.placeholder.com/300x300/F4F7F5/0E4D45?text=صورة'">
+                </div>
+                <div class="p-2 text-center">
+                  <h3 class="text-xs font-bold text-dark mb-1">حمزة هلال</h3>
+                  <p class="text-[10px] text-secondary font-bold">علوم</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-12 pb-8 border-t-4 border-gold mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.jpg" alt="الشعار" class="h-16 mx-auto mb-4 grayscale hover:grayscale-0 transition opacity-80"
+        onerror="this.src='https://via.placeholder.com/80/0E4D45/FFFFFF?text=Logo'">
+      <h4 class="text-lg font-bold mb-1">مدرسة المتفوقين الأولى باللاذقية</h4>
+      <p class="text-gray-400 text-sm mb-6">منارة العلم والتميز الأكاديمي والابتكار</p>
+      <div class="flex justify-center gap-4 mb-6 text-sm text-gray-300 flex-wrap font-bold">
+        <a href="index.html" class="hover:text-gold">الرئيسية</a>
+        <a href="about.html" class="hover:text-gold">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-gold">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-gold">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-gold transition-colors">الفريق التطوعي</a>
+
+        <a href="achievements.html" class="hover:text-gold">الإنجازات</a>
+        <a href="contact.html" class="hover:text-gold">تواصل معنا</a>
+      </div>
+      <p class="text-xs text-gray-500 font-english">جميع الحقوق محفوظة © مدرسة المتفوقين الأولى باللاذقية 1998 - 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script للتحكم بالأزرار والفلترة -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const baccalaureateSection = document.querySelector('.baccalaureate-section');
+      const olympiadSection = document.querySelector('.olympiad-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white');
+            b.classList.add('bg-soft', 'text-dark');
+          });
+          this.classList.remove('bg-soft', 'text-dark');
+          this.classList.add('bg-primary', 'text-white');
+
+          const filter = this.getAttribute('data-filter');
+
+          if (filter === 'all') {
+            baccalaureateSection.style.display = 'block';
+            olympiadSection.style.display = 'block';
+          } else if (filter === 'baccalaureate') {
+            baccalaureateSection.style.display = 'block';
+            olympiadSection.style.display = 'none';
+          } else if (filter === 'olympiad') {
+            baccalaureateSection.style.display = 'none';
+            olympiadSection.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

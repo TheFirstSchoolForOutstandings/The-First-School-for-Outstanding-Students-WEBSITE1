@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن المدرسة | مدرسة المتفوقين الأولى باللاذقية</title>
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F5F58',
+            dark: '#073F3A',
+            gold: { DEFAULT: '#D6A64F', light: '#E4B65F' },
+            soft: '#F7F8F5',
+            secondary: '#18856F',
+            accent: '#B93636'
+          },
+          boxShadow: {
+            premium: '0 10px 30px -10px rgba(7, 63, 58, 0.1)'
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            english: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-soft text-dark flex flex-col min-h-screen font-arabic">
+
+  <!-- الهيدر الرئيسي -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.jpg" alt="شعار مدرسة المتفوقين" class="h-20 w-auto object-contain"
+          onerror="this.src='https://via.placeholder.com/150x80/0F5F58/FFFFFF?text=Logo'">
+        <div>
+          <h1 class="text-primary font-bold text-sm sm:text-base lg:text-xl leading-tight">
+            مدرسة المتفوقين الأولى باللاذقية
+          </h1>
+          <h2 class="hidden sm:block text-gray-500 font-english text-[10px] lg:text-xs uppercase tracking-wider">
+            The First School for Outstanding Students
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-5 text-sm font-bold text-dark">
+        <a href="index.html" class="hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-secondary transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-secondary transition-colors">تواصل معنا</a>
+      </nav>
+      <button id="mobile-menu-btn" class="xl:hidden text-primary p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t flex flex-col shadow-premium absolute w-full z-50">
+      <div class="flex flex-col gap-2 p-4 font-bold text-dark">
+        <a href="index.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">عن
+          المدرسة</a>
+        <a href="teachers.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الكادر
+          التدريسي</a>
+        <a href="activities.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الفريق التطوعي</a>
+
+        <a href="achievements.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">تواصل
+          معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- الشريط الإخباري المتكرر -->
+  <div class="bg-dark text-white flex items-center h-10 overflow-hidden text-sm">
+    <div
+      class="bg-gold px-4 py-2 font-bold whitespace-nowrap h-full flex items-center z-10 shadow-[2px_0_10px_rgba(0,0,0,0.2)]">
+      آخر الأخبار</div>
+    <div class="flex-1 ticker-wrap h-full flex items-center bg-[#05302c]">
+      <div class="ticker-move">
+        <!-- النسخة الأولى من الأخبار -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+
+        <!-- النسخة الثانية (مكررة بالضبط لسد الفراغ وجعل الحركة متصلة) -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            الياسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow py-12 container mx-auto px-4">
+    <span class="bg-gold/20 text-dark text-xs px-3 py-1 rounded-full font-bold">نادي موسيقي</span>
+    <h2 class="text-3xl font-bold text-primary mt-2 mb-4">
+      كورال العزف وغناء
+    </h2>
+    <p class="text-gray-600 max-w-3xl leading-relaxed mb-8">
+      يجمع بين التدريب على الآلات الموسيقية المختلفة والأداء الصوتي الجماعي
+      (الكورال)، ويشارك في الاحتفالات والمناسبات المدرسية الرسمية.
+    </p>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <img src="assets/موسيقا.webp" class="w-full h-64 object-cover rounded-xl shadow-sm" />
+      <img src="assets/موسيقا (2).webp" class="w-full h-64 object-cover rounded-xl shadow-sm" />
+      <img src="assets/موسيقا (3).webp" class="w-full h-64 object-cover rounded-xl shadow-sm" />
+      <img src="assets/موسيقا (4).webp" class="w-full h-64 object-cover rounded-xl shadow-sm" />
+    </div>
+  </main>
+
+  <!--the footer-->
+  <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-gold mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.jpg" alt="الشعار"
+        class="h-16 mx-auto mb-6 grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100" onerror="
+          this.src = 'https://via.placeholder.com/80/0F5F58/FFFFFF?text=Logo'
+        " />
+      <h4 class="text-xl font-bold mb-2">مدرسة المتفوقين الأولى باللاذقية</h4>
+      <p class="text-gray-400 mb-8">
+        منارة العلم والتميز الأكاديمي والابتكار
+      </p>
+      <div class="flex justify-center gap-6 mb-8 text-sm text-gray-300 flex-wrap font-bold">
+        <a href="index.html" class="hover:text-gold transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-gold transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-gold transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-gold transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-gold transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-gold transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-gold transition-colors">تواصل معنا</a>
+      </div>
+      <p class="text-sm text-gray-500 font-english">
+        جميع الحقوق محفوظة © مدرسة المتفوقين الأولى باللاذقية 1998 - 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

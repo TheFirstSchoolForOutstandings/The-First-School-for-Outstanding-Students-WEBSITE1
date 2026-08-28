@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكادر التدريسي | مدرسة المتفوقين الأولى باللاذقية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#0F5F58', dark: '#073F3A', gold: { DEFAULT: '#D6A64F', light: '#E4B65F' }, soft: '#F7F8F5', secondary: '#18856F', accent: '#B93636' },
+          boxShadow: { premium: '0 10px 30px -10px rgba(7, 63, 58, 0.1)' },
+          fontFamily: { arabic: ['Cairo', 'sans-serif'], english: ['Inter', 'sans-serif'] }
+        }
+      }
+
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-soft text-dark flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.jpg" alt="شعار مدرسة المتفوقين" class="h-20 w-auto object-contain"
+          onerror="this.src='https://via.placeholder.com/150x80/0F5F58/FFFFFF?text=Logo'">
+        <div>
+          <h1 class="text-primary font-bold text-sm sm:text-base lg:text-xl leading-tight">
+            مدرسة المتفوقين الأولى باللاذقية
+          </h1>
+          <h2 class="hidden sm:block text-gray-500 font-english text-[10px] lg:text-xs uppercase tracking-wider">
+            The First School for Outstanding Students
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-5 text-sm font-bold text-dark">
+        <a href="index.html" class="hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="text-primary font-extrabold border-b-2 border-primary">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-secondary transition-colors">تواصل معنا</a>
+      </nav>
+      <button id="mobile-menu-btn" class="xl:hidden text-primary p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t flex flex-col shadow-premium absolute w-full z-50">
+      <div class="flex flex-col gap-2 p-4 font-bold text-dark">
+        <a href="index.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">عن
+          المدرسة</a>
+        <a href="teachers.html" class="text-secondary border-b-2 border-secondary pb-1">الكادر
+          التدريسي</a>
+        <a href="activities.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الفريق التطوعي</a>
+
+        <a href="achievements.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">تواصل
+          معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- الشريط الإخباري المتكرر -->
+  <div class="bg-dark text-white flex items-center h-10 overflow-hidden text-sm">
+    <div
+      class="bg-gold px-4 py-2 font-bold whitespace-nowrap h-full flex items-center z-10 shadow-[2px_0_10px_rgba(0,0,0,0.2)]">
+      آخر الأخبار</div>
+    <div class="flex-1 ticker-wrap h-full flex items-center bg-[#05302c]">
+      <div class="ticker-move">
+        <!-- النسخة الأولى من الأخبار -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+
+        <!-- النسخة الثانية (مكررة بالضبط لسد الفراغ وجعل الحركة متصلة) -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            الياسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="bg-gradient-to-br from-primary via-dark to-[#042828] text-white py-12 relative">
+    <div class="text-center mb-3">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">الكادر البشري في المدرسة</h1>
+      <p class="text-gold-light text-lg md:text-base max-w-xl mx-auto">ختر القسم، ثم اضغط على التخصص أو المهمة لعرض
+        الأسماء، واضغط على أي اسم للاطلاع على التفاصيل.</p>
+    </div>
+  </section>
+
+  <!-- أزرار اختيار القسم -->
+  <main class="container mx-auto px-4 max-w-6xl">
+    <section class="py-6 white"></section>
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <button data-target="teaching-staff"
+        class="level-btn bg-gold text-dark px-8 py-3 rounded-full font-bold text-lg shadow-md transition transform hover:scale-105">
+        الكادر التدريسي
+      </button>
+      <button data-target="admin-staff"
+        class="level-btn bg-primary/50 text-white px-8 py-3 rounded-full font-bold text-lg shadow-md transition transform hover:scale-105">
+        الكادر الإداري
+      </button>
+      <button data-target="prof-staff"
+        class="level-btn bg-primary/50 text-white px-8 py-3 rounded-full font-bold text-lg shadow-md transition transform hover:scale-105">
+        المهنيون والمستخدمون والحراس
+      </button>
+    </div>
+
+    <!-- ==================== الكادر التدريسي ==================== -->
+    <div id="teaching-staff" class="level-section">
+      <h3 class="text-2xl font-bold text-primary mb-6 border-r-4 border-gold pr-3">الكادر التدريسي حسب المادة</h3>
+
+      <!-- أزرار المواد -->
+      <div class="flex flex-wrap gap-3 mb-8">
+        <button data-target="teach-0"
+          class="subject-btn bg-gold text-dark md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التربية
+          الدينية الإسلامية</button>
+        <button data-target="teach-1"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">اللغة
+          العربية</button>
+        <button data-target="teach-2"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الجغرافيا</button>
+        <button data-target="teach-3"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التاريخ</button>
+        <button data-target="teach-4"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التربية
+          القومية</button>
+        <button data-target="teach-5"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">اللغة
+          الإنجليزية</button>
+        <button data-target="teach-6"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">اللغة
+          الفرنسية</button>
+        <button data-target="teach-7"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الرياضيات</button>
+        <button data-target="teach-8"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الفيزياء
+          والكيمياء</button>
+        <button data-target="teach-9"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">المعلوماتية</button>
+        <button data-target="teach-10"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">العلوم</button>
+        <button data-target="teach-11"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الفنون</button>
+        <button data-target="teach-12"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التربية
+          الرياضية</button>
+        <button data-target="teach-13"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">اللغة
+          الروسية</button>
+        <button data-target="teach-14"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التربية
+          الدينية المسيحية</button>
+      </div>
+
+      <!-- قائمة المدرسين لكل مادة -->
+      <div class="bg-white p-6 rounded-2xl shadow-premium border border-gray-100 min-h-[220px]">
+
+        <div id="teach-0" class="teachers-list grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('يوسف احمد ضياء الدين نجار', 'التربية الدينية الإسلامية', 'مدرس مادة التربية الدينية الإسلامية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ي</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">يوسف احمد ضياء الدين نجار</h4>
+              <p class="text-xs text-primary font-semibold">التربية الدينية الإسلامية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('سياج صديق درويش', 'التربية الدينية الإسلامية', 'مدرس مادة التربية الدينية الإسلامية', '18 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">س
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سياج صديق درويش</h4>
+              <p class="text-xs text-primary font-semibold">التربية الدينية الإسلامية (18 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-1" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('ريم عماد الدين  حلوم', 'اللغة العربية', 'مدرس مادة اللغة العربية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ر</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ريم عماد الدين حلوم</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('يعرب عارف جديد', 'اللغة العربية', 'مدرس مادة اللغة العربية', '21 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ي
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">يعرب عارف جديد</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (21 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('نعيم علي ميا', 'اللغة العربية', 'مدرس مادة اللغة العربية', '35 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ن</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">نعيم علي ميا</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (35 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('محمد صافي بيشاني', 'اللغة العربية', 'مدرس مادة اللغة العربية', '31 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">محمد صافي بيشاني</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (31 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('علي نظير شهرة', 'اللغة العربية', 'مدرس مادة اللغة العربية', '27 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">علي نظير شهرة</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (27 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('فادي منير محمود', 'اللغة العربية', 'مدرس مادة اللغة العربية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ف
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فادي منير محمود</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('يوسف عيسى المحمود', 'اللغة العربية', 'مدرس مادة اللغة العربية', '33 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ي</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">يوسف عيسى المحمود</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (33 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('ايمن محمد اسماعيل', 'اللغة العربية', 'مدرس مادة اللغة العربية', '8 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ا
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ايمن محمد اسماعيل</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (8 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('علا عدنان سليمان', 'اللغة العربية', 'مدرس مادة اللغة العربية', '15 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">علا عدنان سليمان</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (15 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('زاهر محمد جميل قط', 'اللغة العربية', 'مدرس مادة اللغة العربية', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ز
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">زاهر محمد جميل قط</h4>
+              <p class="text-xs text-primary font-semibold">اللغة العربية (20 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-2" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('باسل حسن داؤد', 'الجغرافيا', 'مدرس مادة الجغرافيا', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ب</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">باسل حسن داؤد</h4>
+              <p class="text-xs text-primary font-semibold">الجغرافيا (22 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('كنانة كاسر حليمي', 'الجغرافيا', 'مدرس مادة الجغرافيا', '18 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ك
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">كنانة كاسر حليمي</h4>
+              <p class="text-xs text-primary font-semibold">الجغرافيا (18 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('عبير وهب مناع', 'الجغرافيا', 'مدرس مادة الجغرافيا', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عبير وهب مناع</h4>
+              <p class="text-xs text-primary font-semibold">الجغرافيا (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('هزار محمود سليمان', 'الجغرافيا', 'مدرس مادة الجغرافيا', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ه
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">هزار محمود سليمان</h4>
+              <p class="text-xs text-primary font-semibold">الجغرافيا (20 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-3" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('هيام خازم مناع', 'التاريخ', 'مدرس مادة التاريخ', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ه</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">هيام خازم مناع</h4>
+              <p class="text-xs text-primary font-semibold">التاريخ (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('سوزان حبيب يوسف', 'التاريخ', 'مدرس مادة التاريخ', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">س
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سوزان حبيب يوسف</h4>
+              <p class="text-xs text-primary font-semibold">التاريخ (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('سعاد محمد يوسف', 'التاريخ', 'مدرس مادة التاريخ', '18 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              س</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سعاد محمد يوسف</h4>
+              <p class="text-xs text-primary font-semibold">التاريخ (18 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-4" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('بشار مرشد البري', 'التربية القومية', 'مدرس مادة التربية القومية', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ب</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بشار مرشد البري</h4>
+              <p class="text-xs text-primary font-semibold">التربية القومية (22 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-5" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('نبال صديق اسماعيل', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ن</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">نبال صديق اسماعيل</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ثورة محمد توفيق اوزون', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ث
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ثورة محمد توفيق اوزون</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ثناء وهب مناع', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '18 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ث</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ثناء وهب مناع</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (18 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('رولا زكريا خرما', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ر
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رولا زكريا خرما</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('صفاء سلمان جريكوس', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ص</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">صفاء سلمان جريكوس</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ريم سليمان بليدي', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ر
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ريم سليمان بليدي</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('بشار أحمد مرهج', 'اللغة الإنجليزية', 'مدرس مادة اللغة الإنجليزية', '8 سنة خبرة', 'إجازة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ب</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بشار أحمد مرهج</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الإنجليزية (8 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-6" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('هند محمد ابر اهيم', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '32 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ه</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">هند محمد ابر اهيم</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (32 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('محمد مصطفى أبو العروس', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '15 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">محمد مصطفى أبو العروس</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (15 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('ندين نجيب حداد', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ن</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ندين نجيب حداد</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('سعد علي نصرة', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">س
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سعد علي نصرة</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (22 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('بوسي انور علي', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '8 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ب</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بوسي انور علي</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (8 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ماريا الياس صليبا', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ماريا الياس صليبا</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('آصف محمد صبيح', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              آ</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">آصف محمد صبيح</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (22 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('منى أحمد زين الدين', 'اللغة الفرنسية', 'مدرس مادة اللغة الفرنسية', '26 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">منى أحمد زين الدين</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الفرنسية (26 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-7" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('ماجد علي خيربك', 'الرياضيات', 'مدرس مادة الرياضيات', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ماجد علي خيربك</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (22 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('يوسف فائز نصار', 'الرياضيات', 'مدرس مادة الرياضيات', '27 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ي
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">يوسف فائز نصار</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (27 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('بشار بدر محمد', 'الرياضيات', 'مدرس مادة الرياضيات', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ب</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بشار بدر محمد</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('لينا ابراهيم عيسى', 'الرياضيات', 'مدرس مادة الرياضيات', '25 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ل
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">لينا ابراهيم عيسى</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (25 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('فيروز عيسى بركات', 'الرياضيات', 'مدرس مادة الرياضيات', '27 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ف</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فيروز عيسى بركات</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (27 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('مرتضى صالح عياش', 'الرياضيات', 'مدرس مادة الرياضيات', '15 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">مرتضى صالح عياش</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (15 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('مازن سليمان مصطفى', 'الرياضيات', 'مدرس مادة الرياضيات', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">مازن سليمان مصطفى</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('مياس علي أحمد', 'الرياضيات', 'مدرس مادة الرياضيات', '15 سنة خبرة', 'إجازة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">مياس علي أحمد</h4>
+              <p class="text-xs text-primary font-semibold">الرياضيات (15 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-8" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('ايهم عبد المسيح اندراوس', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '27 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ا</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ايهم عبد المسيح اندراوس</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (27 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('تيسير احمد نعامة', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '31 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ت
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">تيسير احمد نعامة</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (31 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('علي نديم حاتم', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">علي نديم حاتم</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('عائد عيسى دبول', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ع
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عائد عيسى دبول</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (22 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('مازن عيد ابراهيم', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '28 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">مازن عيد ابراهيم</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (28 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('فراس بدر محمد', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '30 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ف
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فراس بدر محمد</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (30 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('غرام سلمان حسن', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              غ</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">غرام سلمان حسن</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ثراء أحمد علي', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '20 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ث
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ثراء أحمد علي</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('علي نصر معلا', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '16 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">علي نصر معلا</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (16 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('محمد أحمد جيرو', 'الفيزياء والكيمياء', 'مدرس مادة الفيزياء والكيمياء', '22 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">م
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">محمد أحمد جيرو</h4>
+              <p class="text-xs text-primary font-semibold">الفيزياء والكيمياء (22 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-9" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('محمد هاشم عبد الغني كيالي', 'المعلوماتية', 'مدرس مادة المعلوماتية', '32 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">محمد هاشم عبد الغني كيالي</h4>
+              <p class="text-xs text-primary font-semibold">المعلوماتية (32 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('لارا علي جبيلي', 'المعلوماتية', 'مدرس مادة المعلوماتية', '8 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ل
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">لارا علي جبيلي</h4>
+              <p class="text-xs text-primary font-semibold">المعلوماتية (8 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-10" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('لؤي محمود محمد', 'العلوم', 'مدرس مادة العلوم', '25 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ل</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">لؤي محمود محمد</h4>
+              <p class="text-xs text-primary font-semibold">العلوم (25 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('ثروى حسين ناعم', 'العلوم', 'مدرس مادة العلوم', '25 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ث
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ثروى حسين ناعم</h4>
+              <p class="text-xs text-primary font-semibold">العلوم (25 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('سامر نظير العمر', 'العلوم', 'مدرس مادة العلوم', '26 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              س</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سامر نظير العمر</h4>
+              <p class="text-xs text-primary font-semibold">العلوم (26 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('سلوى عبد الهادي محمد', 'العلوم', 'مدرس مادة العلوم', '26 سنة خبرة', 'إجازة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">س
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سلوى عبد الهادي محمد</h4>
+              <p class="text-xs text-primary font-semibold">العلوم (26 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('جهاد معين خير بك', 'العلوم', 'مدرس مادة العلوم', '20 سنة خبرة', 'إجازة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ج</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">جهاد معين خير بك</h4>
+              <p class="text-xs text-primary font-semibold">العلوم (20 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-11" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('ايمان برهان الشيخ', 'الفنون', 'مدرس مادة الفنون', '20 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ا</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ايمان برهان الشيخ</h4>
+              <p class="text-xs text-primary font-semibold">الفنون (20 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('عناية محمد دريباتي', 'الفنون', 'مدرس مادة الفنون', '19 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ع
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عناية محمد دريباتي</h4>
+              <p class="text-xs text-primary font-semibold">الفنون (19 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('وفاء عقل عثمان', 'الفنون', 'مدرس مادة الفنون', '38 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              و</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">وفاء عقل عثمان</h4>
+              <p class="text-xs text-primary font-semibold">الفنون (38 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('ايمان احمد سلوم', 'الفنون', 'مدرس مادة الفنون', '18 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ا
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ايمان احمد سلوم</h4>
+              <p class="text-xs text-primary font-semibold">الفنون (18 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-12" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('رانية عادل اسماعيل', 'التربية الرياضية', 'مدرس مادة التربية الرياضية', '24 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ر</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رانية عادل اسماعيل</h4>
+              <p class="text-xs text-primary font-semibold">التربية الرياضية (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('سامر عدنان سلوم', 'التربية الرياضية', 'مدرس مادة التربية الرياضية', '37 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">س
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سامر عدنان سلوم</h4>
+              <p class="text-xs text-primary font-semibold">التربية الرياضية (37 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('فاديا حنا عبدو', 'التربية الرياضية', 'مدرس مادة التربية الرياضية', '38 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ف</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فاديا حنا عبدو</h4>
+              <p class="text-xs text-primary font-semibold">التربية الرياضية (38 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('اسامة زاهد حريقه', 'التربية الرياضية', 'مدرس مادة التربية الرياضية', '23 سنة خبرة', 'معهد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ا
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">اسامة زاهد حريقه</h4>
+              <p class="text-xs text-primary font-semibold">التربية الرياضية (23 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-13" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('أيهم أحمد غانم', 'اللغة الروسية', 'مدرس مادة اللغة الروسية', '7 سنة خبرة', 'جامعة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              أ</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">أيهم أحمد غانم</h4>
+              <p class="text-xs text-primary font-semibold">اللغة الروسية (7 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="teach-14" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('مارينا يوسف مخول', 'التربية الدينية المسيحية', 'مدرس مادة التربية الدينية المسيحية', '7 سنة خبرة', 'إجازة')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">مارينا يوسف مخول</h4>
+              <p class="text-xs text-primary font-semibold">التربية الدينية المسيحية (7 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ==================== الكادر الإداري ==================== -->
+    <div id="admin-staff" class="level-section hidden">
+      <h3 class="text-2xl font-bold text-primary mb-6 border-r-4 border-gold pr-3">الكادر الإداري حسب العمل المسند
+      </h3>
+
+      <!-- أزرار الأعمال الإدارية -->
+      <div class="flex flex-wrap gap-3 mb-8">
+        <button data-target="admin-0"
+          class="subject-btn bg-gold text-dark md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الإدارة</button>
+        <button data-target="admin-1"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">أمانة
+          السر</button>
+        <button data-target="admin-2"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الأنشطة
+          اللاصفية</button>
+        <button data-target="admin-3"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الإرشاد
+          النفسي</button>
+        <button data-target="admin-4"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">أمانة
+          سر الحاسوب</button>
+        <button data-target="admin-5"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">أمانة
+          المكتبة</button>
+        <button data-target="admin-6"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">معاون
+          أمين المكتبة</button>
+        <button data-target="admin-7"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">التوجيه</button>
+        <button data-target="admin-8"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الإرشاد</button>
+      </div>
+
+      <!-- قائمة الإداريين لكل عمل -->
+      <div class="bg-white p-6 rounded-2xl shadow-premium border border-gray-100 min-h-[220px]">
+
+        <div id="admin-0" class="teachers-list grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('جميل محمد يوسف', 'الإدارة', 'يعمل في الإدارة', '15 سنة خبرة', 'ماجستير')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ج</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">جميل محمد يوسف</h4>
+              <p class="text-xs text-primary font-semibold">الإدارة (15 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-1" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('سامر داؤد ابراهيم', 'أمانة السر', 'يعمل في أمانة السر', '36 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              س</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سامر داؤد ابراهيم</h4>
+              <p class="text-xs text-primary font-semibold">أمانة السر (36 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('حسان توفيق شامي', 'أمانة السر', 'يعمل في أمانة السر', '36 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ح
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">حسان توفيق شامي</h4>
+              <p class="text-xs text-primary font-semibold">أمانة السر (36 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-2" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('غيثاء بديع لايقة', 'الأنشطة اللاصفية', 'يعمل في الأنشطة اللاصفية', '37 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              غ</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">غيثاء بديع لايقة</h4>
+              <p class="text-xs text-primary font-semibold">الأنشطة اللاصفية (37 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ربيع ناظم حسون', 'الأنشطة اللاصفية', 'يعمل في الأنشطة اللاصفية', '23 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ر
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ربيع ناظم حسون</h4>
+              <p class="text-xs text-primary font-semibold">الأنشطة اللاصفية (23 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('رباب سرحان زويد', 'الأنشطة اللاصفية', 'يعمل في الأنشطة اللاصفية', '31 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ر</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رباب سرحان زويد</h4>
+              <p class="text-xs text-primary font-semibold">الأنشطة اللاصفية (31 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-3" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('ميساء محسن زمزم', 'الإرشاد النفسي', 'يعمل في الإرشاد النفسي', '8 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ميساء محسن زمزم</h4>
+              <p class="text-xs text-primary font-semibold">الإرشاد النفسي (8 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('ازدهار زهير زيود', 'الإرشاد النفسي', 'يعمل في الإرشاد النفسي', '18 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ا
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ازدهار زهير زيود</h4>
+              <p class="text-xs text-primary font-semibold">الإرشاد النفسي (18 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('عبير محمود عيسى', 'الإرشاد النفسي', 'يعمل في الإرشاد النفسي', '18 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عبير محمود عيسى</h4>
+              <p class="text-xs text-primary font-semibold">الإرشاد النفسي (18 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-4" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('وداد توفيق وردة', 'أمانة سر الحاسوب', 'يعمل في أمانة سر الحاسوب', '30 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              و</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">وداد توفيق وردة</h4>
+              <p class="text-xs text-primary font-semibold">أمانة سر الحاسوب (30 سنة خبرة)</p>
+            </div>
+          </div>
+          <div
+            onclick="showBio('رناء مامون مورللي', 'أمانة سر الحاسوب', 'يعمل في أمانة سر الحاسوب', '24 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ر
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رناء مامون مورللي</h4>
+              <p class="text-xs text-primary font-semibold">أمانة سر الحاسوب (24 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-5" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('خديجة خالد الباشا', 'أمانة المكتبة', 'يعمل في أمانة المكتبة', '32 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              خ</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">خديجة خالد الباشا</h4>
+              <p class="text-xs text-primary font-semibold">أمانة المكتبة (32 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-6" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div
+            onclick="showBio('سوزان معين خيربك', 'معاون أمين المكتبة', 'يعمل في معاون أمين المكتبة', '38 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              س</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">سوزان معين خيربك</h4>
+              <p class="text-xs text-primary font-semibold">معاون أمين المكتبة (38 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-7" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('عهد محمد جديد', 'التوجيه', 'يعمل في التوجيه', '26 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ع</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عهد محمد جديد</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (26 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('علياء فريد علي', 'التوجيه', 'يعمل في التوجيه', '7 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ع
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">علياء فريد علي</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (7 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('رغداء علي عثمان', 'التوجيه', 'يعمل في التوجيه', '36 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ر</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رغداء علي عثمان</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (36 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('فاديا عبداللة العبسي', 'التوجيه', 'يعمل في التوجيه', '28 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ف
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فاديا عبداللة العبسي</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (28 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('رحاب منير ناصر', 'التوجيه', 'يعمل في التوجيه', '24 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ر</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رحاب منير ناصر</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (24 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('رانيا كريم ضاهر', 'التوجيه', 'يعمل في التوجيه', '32 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ر
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">رانيا كريم ضاهر</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (32 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('ازدهار محمود دويبة', 'التوجيه', 'يعمل في التوجيه', '31 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ا</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ازدهار محمود دويبة</h4>
+              <p class="text-xs text-primary font-semibold">التوجيه (31 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="admin-8" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('ولاء هيثم الفروي', 'الإرشاد', 'يعمل في الإرشاد', '8 سنة خبرة', 'دبلوم')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              و</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">ولاء هيثم الفروي</h4>
+              <p class="text-xs text-primary font-semibold">الإرشاد (8 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <section class="py-9 white"></section>
+
+
+    <!-- ==================== المهنيون والمستخدمون والحراس ==================== -->
+    <div id="prof-staff" class="level-section hidden">
+      <h3 class="text-2xl font-bold text-primary mb-6 border-r-4 border-gold pr-3">المهنيون والمستخدمون والحراس</h3>
+
+      <!-- أزرار الفئات -->
+      <div class="flex flex-wrap gap-3 mb-8">
+        <button data-target="prof-0"
+          class="subject-btn bg-gold text-dark md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">المستخدمون</button>
+        <button data-target="prof-1"
+          class="subject-btn bg-primary/40 text-gray-200 md:hover:bg-primary px-5 py-2.5 rounded-lg font-bold text-sm shadow transition">الحراس</button>
+      </div>
+
+      <!-- قائمة كل فئة -->
+      <div class="bg-white p-6 rounded-2xl shadow-premium border border-gray-100 min-h-[220px]">
+
+        <div id="prof-0" class="teachers-list grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('محسن عارف القصعة', 'المستخدمون', 'يعمل ك المستخدمون', '32 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">محسن عارف القصعة</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (32 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('أمين سلمان عمران', 'المستخدمون', 'يعمل ك المستخدمون', '31 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">أ
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">أمين سلمان عمران</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (31 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('شاديا سجيع كغا', 'المستخدمون', 'يعمل ك المستخدمون', '6 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ش</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">شاديا سجيع كغا</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (6 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('فادية سهيل الدشر', 'المستخدمون', 'يعمل ك المستخدمون', '6 سنة خبرة', 'ثانوية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ف
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">فادية سهيل الدشر</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (6 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('لينا أسد حلواني', 'المستخدمون', 'يعمل ك المستخدمون', '4 سنة خبرة', 'ثانوية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ل</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">لينا أسد حلواني</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (4 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('بتول جمال كامل', 'المستخدمون', 'يعمل ك المستخدمون', '5 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ب
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بتول جمال كامل</h4>
+              <p class="text-xs text-primary font-semibold">المستخدمون (5 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="prof-1" class="teachers-list hidden grid md:grid-cols-2 gap-4">
+          <div onclick="showBio('نزار فؤاد نمر', 'الحراس', 'يعمل ك الحراس', '18 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              ن</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">نزار فؤاد نمر</h4>
+              <p class="text-xs text-primary font-semibold">الحراس (18 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('بسام نصر فاضل', 'الحراس', 'يعمل ك الحراس', '30 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ب
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">بسام نصر فاضل</h4>
+              <p class="text-xs text-primary font-semibold">الحراس (30 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('منهل بديع درويش', 'الحراس', 'يعمل ك الحراس', '13 سنة خبرة', 'اعدادية')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+              م</div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">منهل بديع درويش</h4>
+              <p class="text-xs text-primary font-semibold">الحراس (13 سنة خبرة)</p>
+            </div>
+          </div>
+          <div onclick="showBio('عادل جميل هيفا', 'الحراس', 'يعمل ك الحراس', '29 سنة خبرة', 'غير محدد')"
+            class="cursor-pointer bg-soft p-4 rounded-xl border border-gray-200 hover:border-gold hover:shadow-md transition flex items-center gap-4">
+            <div class="w-12 h-12 bg-gold text-dark rounded-full flex items-center justify-center font-bold text-lg">ع
+            </div>
+            <div>
+              <h4 class="font-bold text-dark text-lg">عادل جميل هيفا</h4>
+              <p class="text-xs text-primary font-semibold">الحراس (29 سنة خبرة)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </main>
+
+  <!-- النافذة المنبثقة عرض السيرة الذاتية (Modal) -->
+  <div id="bio-modal"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+    <div
+      class="bg-white rounded-2xl p-6 md:p-8 max-w-lg w-full shadow-2xl relative border-t-4 border-gold animate-fade-in">
+      <button id="close-modal-btn"
+        class="absolute top-4 left-4 text-gray-400 hover:text-dark text-2xl font-bold">&times;</button>
+      <div class="flex items-center gap-4 mb-6">
+        <div
+          class="w-16 h-16 bg-primary text-gold rounded-full flex items-center justify-center text-2xl font-bold shadow-md">
+          🎓</div>
+        <div>
+          <h3 id="modal-teacher-name" class="text-2xl font-bold text-dark">اسم المدرس</h3>
+          <p id="modal-teacher-subject" class="text-sm font-semibold text-primary">المادة</p>
+        </div>
+      </div>
+      <div class="space-y-4 text-sm text-gray-700 leading-relaxed border-t pt-4">
+        <div>
+          <h5 class="font-bold text-dark mb-1">نبذة عن المدرس / السيرة الذاتية:</h5>
+          <p id="modal-teacher-bio" class="bg-soft p-3 rounded-lg border border-gray-100"></p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h5 class="font-bold text-dark mb-1">سنوات الخبرة:</h5>
+            <p id="modal-teacher-exp" class="font-bold text-primary"></p>
+          </div>
+          <div>
+            <h5 class="font-bold text-dark mb-1">الشهادة الأكاديمية:</h5>
+            <p id="modal-teacher-cert" class="font-bold text-primary"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-gold mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.jpg" alt="الشعار"
+        class="h-16 mx-auto mb-6 grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100"
+        onerror="this.src='https://via.placeholder.com/80/0F5F58/FFFFFF?text=Logo'">
+      <h4 class="text-xl font-bold mb-2">مدرسة المتفوقين الأولى باللاذقية</h4>
+      <p class="text-gray-400 mb-8">منارة العلم والتميز الأكاديمي والابتكار</p>
+      <div class="flex justify-center gap-6 mb-8 text-sm text-gray-300 flex-wrap font-bold">
+        <a href="index.html" class="hover:text-gold transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-gold transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-gold transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-gold transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-gold transition-colors">الفريق التطوعي</a>
+
+        <a href="achievements.html" class="hover:text-gold transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-gold transition-colors">تواصل معنا</a>
+      </div>
+      <p class="text-sm text-gray-500 font-english">جميع الحقوق محفوظة © مدرسة المتفوقين الأولى باللاذقية 1998 - 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

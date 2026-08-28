@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600&display=swap');
+
+body { 
+  font-family: 'Cairo', sans-serif; 
+  scroll-behavior: smooth; 
+}
+
+.font-english { 
+  font-family: 'Inter', sans-serif; 
+}
+
+/* --- تنسيقات الشريط الإخباري المتكرر --- */
+.ticker-wrap { 
+  width: 100%; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  position: relative; 
+}
+
+.ticker-move { 
+  display: flex; 
+  width: max-content; 
+  white-space: nowrap; 
+  animation: ticker 30s linear infinite; 
+}
+
+.ticker-wrap:hover .ticker-move { 
+  animation-play-state: paused; 
+}
+
+/* حركة التمرير لشاشات RTL من اليمين إلى اليسار */
+@keyframes ticker { 
+  0% { 
+    transform: translateX(0); 
+  } 
+  100% { 
+    transform: translateX(50%); 
+  } 
+}
+
+/* --- إخفاء شريط التمرير --- */
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none; 
+}
+
+.scrollbar-hide { 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+@media (max-width: 396px) {
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  h1 { font-size: 1.25rem !important; }
+  h2 { font-size: 1.1rem !important; }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}

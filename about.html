@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن المدرسة | مدرسة المتفوقين الأولى باللاذقية</title>
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F5F58',
+            dark: '#073F3A',
+            gold: { DEFAULT: '#D6A64F', light: '#E4B65F' },
+            soft: '#F7F8F5',
+            secondary: '#18856F',
+            accent: '#B93636'
+          },
+          boxShadow: {
+            premium: '0 10px 30px -10px rgba(7, 63, 58, 0.1)'
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            english: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-soft text-dark flex flex-col min-h-screen font-arabic">
+
+  <!-- الهيدر الرئيسي -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.jpg" alt="شعار مدرسة المتفوقين" class="h-20 w-auto object-contain"
+          onerror="this.src='https://via.placeholder.com/150x80/0F5F58/FFFFFF?text=Logo'">
+        <div>
+          <h1 class="text-primary font-bold text-sm sm:text-base lg:text-xl leading-tight">
+            مدرسة المتفوقين الأولى باللاذقية
+          </h1>
+          <h2 class="hidden sm:block text-gray-500 font-english text-[10px] lg:text-xs uppercase tracking-wider">
+            The First School for Outstanding Students
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-5 text-sm font-bold text-dark">
+        <a href="index.html" class="hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="text-secondary border-b-2 border-secondary pb-1">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-secondary transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-secondary transition-colors">تواصل معنا</a>
+      </nav>
+      <button id="mobile-menu-btn" class="xl:hidden text-primary p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t flex flex-col shadow-premium absolute w-full z-50">
+      <div class="flex flex-col gap-2 p-4 font-bold text-dark">
+        <a href="index.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="text-secondary border-b-2 border-secondary pb-1">عن المدرسة</a>
+        <a href="teachers.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الكادر
+          التدريسي</a>
+        <a href="activities.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">النشاطات</a>
+        <a href="volunteer.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الفريق التطوعي</a>
+
+        <a href="achievements.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">تواصل
+          معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- الشريط الإخباري المتكرر -->
+  <div class="bg-dark text-white flex items-center h-10 overflow-hidden text-sm">
+    <div
+      class="bg-gold px-4 py-2 font-bold whitespace-nowrap h-full flex items-center z-10 shadow-[2px_0_10px_rgba(0,0,0,0.2)]">
+      آخر الأخبار</div>
+    <div class="flex-1 ticker-wrap h-full flex items-center bg-[#05302c]">
+      <div class="ticker-move">
+        <!-- النسخة الأولى من الأخبار -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+
+        <!-- النسخة الثانية (مكررة بالضبط لسد الفراغ وجعل الحركة متصلة) -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين
+            للصف السابع للعام الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            الياسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="activities.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة
+            المتفوقين الاولى في اللاذقية في تاريخ 29/8/2026</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="flex-grow">
+
+    <!-- Hero Section / عنوان الصفحة -->
+    <section class="bg-gradient-to-br from-primary via-dark to-[#042B28] text-white py-16 relative overflow-hidden">
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(#D6A64F_1px,transparent_1px)] [background-size:16px_16px]">
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <span
+          class="inline-block bg-gold/20 text-gold-light border border-gold/30 rounded-full px-4 py-1 text-sm font-bold mb-4">
+          🌟 صرح العلم والتميز
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">عن مدرسة المتفوقين</h1>
+        <p class="text-gold-light max-w-2xl mx-auto text-base md:text-lg">
+          بيئة تربوية وحاضنة علمية صُممت خصيصاً لتلبي تطلعات الطلاب المتميزين وتعدّهم ليصبحوا قادة الغد وصنّاع المستقبل.
+        </p>
+      </div>
+    </section>
+
+    <!-- نبذة عن المدرسة وتاريخها -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- النبذة -->
+          <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wider uppercase">
+              <span class="w-8 h-[2px] bg-gold"></span>
+              نبذة عن المدرسة
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-dark leading-snug">
+              احتضان الطاقات الشابة وتنمية العقول المبدعة
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-justify">
+              تُعدّ مدرسة المتفوقين صرحاً تعليمياً وتنويرياً يهدف إلى احتضان الطاقات الشابة وتنمية العقول المبدعة. هي
+              ليست مجرد مكان للتعليم التقليدي، بل بيئة تربوية وحاضنة علمية صُممت خصيصاً لتلبي تطلعات الطلاب المتميزين في
+              المرحلتين الإعدادية والثانوية، وتعدّهم ليصبحوا قادة الغد وصنّاع المستقبل.
+            </p>
+          </div>
+
+          <!-- التاريخ -->
+          <div class="bg-soft p-8 rounded-2xl border border-gray-100 shadow-premium relative">
+            <div class="absolute -top-4 -right-4 bg-gold text-dark p-3 rounded-xl font-bold text-xl shadow-md">
+              📜
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 mt-2">تاريخ المدرسة ودمغة التميز</h3>
+            <p class="text-gray-600 leading-relaxed text-justify">
+              تأسست المدرسة لتكون استجابة حقيقية للحاجة الملحة إلى التعليم التخصصي الذي يرعى الموهبة والتفوق. ومنذ
+              إنشائها، خطت المدرسة خطوات واثقة نحو التميز؛ حيث بدأت بنخبة من الطلاب والمعلمين، وتطورت عبر السنين لتصبح
+              نموذجاً يُحتذى به في الانضباط الأكاديمي، وتطوير المناهج، وتحقيق أعلى المراتب في المسابقات الوطنية
+              والدولية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الرؤية والرسالة -->
+    <section class="py-16 bg-soft border-y border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- الرؤية -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-premium border-t-4 border-gold hover:-translate-y-1 transition-transform duration-300">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 rounded-xl bg-gold/10 text-gold text-2xl flex items-center justify-center font-bold">
+                👁️
+              </div>
+              <h3 class="text-2xl font-bold text-dark">الرؤية</h3>
+            </div>
+            <blockquote
+              class="text-gray-700 text-lg italic leading-relaxed border-r-4 border-gold pr-4 py-2 bg-soft/50 rounded-l-lg">
+              "الريادة في صناعة جيلٍ متميز علمياً، مبدع فكرياً، وقادر على قيادة المستقبل في مجتمعات عالمية متغيرة."
+            </blockquote>
+          </div>
+
+          <!-- الرسالة -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-premium border-t-4 border-primary hover:-translate-y-1 transition-transform duration-300">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 rounded-xl bg-primary/10 text-primary text-2xl flex items-center justify-center font-bold">
+                🎯
+              </div>
+              <h3 class="text-2xl font-bold text-dark">الرسالة</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-justify">
+              تلتزم مدرسة المتفوقين بتقديم تعليم نوعي يعتمد على التفكير النقدي والابتكار، وتوفير بيئة تحفيزية تدمج بين
+              الأصالة والتقنيات الحديثة، مع التركيز على بناء شخصية الطالب المتكاملة أكاديمياً، أخلاقياً، وإنسانياً.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- الأهداف -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-gold font-bold text-sm uppercase tracking-widest">🚀 نحو المستقبل</span>
+          <h2 class="text-3xl font-bold text-dark mt-2">أهداف المدرسة</h2>
+          <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- هدف 1 -->
+          <div
+            class="p-6 rounded-xl bg-soft border border-gray-100 hover:shadow-premium hover:border-gold/30 transition-all">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+              01</div>
+            <h4 class="text-lg font-bold text-dark mb-2">تنمية التفكير الإبداعي</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">الانتقال بالتعليم من التلقين إلى البحث والتفكير التحليلي
+              والمنهجي.</p>
+          </div>
+
+          <!-- هدف 2 -->
+          <div
+            class="p-6 rounded-xl bg-soft border border-gray-100 hover:shadow-premium hover:border-gold/30 transition-all">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+              02</div>
+            <h4 class="text-lg font-bold text-dark mb-2">رعاية المواهب</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">اكتشاف القدرات الخاصة للطلاب وصقلها عبر برامج إثرائية
+              ومختبرات متطورة.</p>
+          </div>
+
+          <!-- هدف 3 -->
+          <div
+            class="p-6 rounded-xl bg-soft border border-gray-100 hover:shadow-premium hover:border-gold/30 transition-all">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+              03</div>
+            <h4 class="text-lg font-bold text-dark mb-2">التفوق الأكاديمي</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">إعداد الطلاب للمنافسة بقوة في اختبارات القبول لأرقى
+              الجامعات المحلية والعالمية.</p>
+          </div>
+
+          <!-- هدف 4 -->
+          <div
+            class="p-6 rounded-xl bg-soft border border-gray-100 hover:shadow-premium hover:border-gold/30 transition-all">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl font-bold mb-4">
+              04</div>
+            <h4 class="text-lg font-bold text-dark mb-2">ترسيخ القيم</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">تعزيز قيم المسؤولية، العمل الجماعي، والمواطنة الفاعلة لدى
+              الطلاب.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- معلومات أساسية -->
+    <section class="py-16 bg-soft">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-dark flex items-center justify-center gap-2">
+            <span>ℹ️</span> معلومات أساسية
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100">
+          <div class="divide-y divide-gray-100">
+
+            <div
+              class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-soft/50 transition">
+              <span class="font-bold text-primary sm:w-1/3 text-lg">المراحل الدراسية</span>
+              <span class="text-gray-700 sm:w-2/3 font-medium">الإعدادية / الثانوية</span>
+            </div>
+
+            <div
+              class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-soft/50 transition">
+              <span class="font-bold text-primary sm:w-1/3 text-lg">نظام القبول</span>
+              <span class="text-gray-700 sm:w-2/3 font-medium">يخضع لاختبارات قدرات ومفاضلة مبنية على التفوق
+                الأكاديمي</span>
+            </div>
+
+            <div
+              class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-soft/50 transition">
+              <span class="font-bold text-primary sm:w-1/3 text-lg">التركيز الأكاديمي</span>
+              <span class="text-gray-700 sm:w-2/3 font-medium">المناهج المتقدمة، العلوم، الرياضيات، واللغات</span>
+            </div>
+
+            <div
+              class="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-soft/50 transition">
+              <span class="font-bold text-primary sm:w-1/3 text-lg">الأنشطة الإثرائية</span>
+              <span class="text-gray-700 sm:w-2/3 font-medium">نوادي العلم والابتكار، المسابقات الدولية، والأنشطة
+                الرياضية والثقافية</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="contact.html"
+            class="inline-block bg-primary text-white font-bold py-2 px-3 rounded-lg shadow-md hover:bg-secondary transition-colors">
+            لمعرفة المزيد تواصل معنا
+          </a>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- الفوتر الرئيسي الجديد الموحد -->
+  <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-gold mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.jpg" alt="الشعار"
+        class="h-16 mx-auto mb-6 grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100" onerror="
+          this.src = 'https://via.placeholder.com/80/0F5F58/FFFFFF?text=Logo'
+        " />
+      <h4 class="text-xl font-bold mb-2">مدرسة المتفوقين الأولى باللاذقية</h4>
+      <p class="text-gray-400 mb-8">
+        منارة العلم والتميز الأكاديمي والابتكار
+      </p>
+      <div class="flex justify-center gap-6 mb-8 text-sm text-gray-300 flex-wrap font-bold">
+        <a href="index.html" class="hover:text-gold transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-gold transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-gold transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-gold transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-gold transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-gold transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-gold transition-colors">تواصل معنا</a>
+      </div>
+      <p class="text-sm text-gray-500 font-english">
+        جميع الحقوق محفوظة © مدرسة المتفوقين الأولى باللاذقية 1998 - 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

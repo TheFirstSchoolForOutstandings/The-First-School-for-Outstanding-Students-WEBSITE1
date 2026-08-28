@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>النشاطات والنوادي | مدرسة المتفوقين الأولى باللاذقية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0F5F58",
+            dark: "#073F3A",
+            gold: { DEFAULT: "#D6A64F", light: "#E4B65F" },
+            soft: "#F7F8F5",
+            secondary: "#18856F",
+            accent: "#B93636",
+          },
+          boxShadow: { premium: "0 10px 30px -10px rgba(7, 63, 58, 0.1)" },
+          fontFamily: {
+            arabic: ["Cairo", "sans-serif"],
+            english: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-soft text-dark flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="logo.jpg" alt="شعار مدرسة المتفوقين" class="h-20 w-auto object-contain" onerror="
+              this.src =
+                'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=200&auto=format&fit=crop'
+            " />
+        <div>
+          <h1 class="text-primary font-bold text-sm sm:text-base lg:text-xl leading-tight">
+            مدرسة المتفوقين الأولى باللاذقية
+          </h1>
+          <h2 class="hidden sm:block text-gray-500 font-english text-[10px] lg:text-xs uppercase tracking-wider">
+            The First School for Outstanding Students
+          </h2>
+        </div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-5 text-sm font-bold text-dark">
+        <a href="index.html" class="hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-secondary transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-secondary transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="text-primary font-extrabold border-b-2 border-primary pb-1">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-secondary transition-colors">تواصل معنا</a>
+      </nav>
+      <button id="mobile-menu-btn" class="xl:hidden text-primary p-2">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden xl:hidden bg-white border-t flex flex-col shadow-premium absolute w-full z-50">
+      <div class="flex flex-col gap-2 p-4 font-bold text-dark">
+        <a href="index.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الرئيسية</a>
+        <a href="about.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الكادر
+          التدريسي</a>
+        <a href="activities.html" class="text-primary font-extrabold border-b-2 border-primary pb-1">النشاطات</a>
+        <a href="volunteer.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html"
+          class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">الإنجازات</a>
+        <a href="contact.html" class="block py-2 border-b border-gray-50 hover:text-secondary transition-colors">تواصل
+          معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- الشريط الإخباري المتكرر -->
+  <div class="bg-dark text-white flex items-center h-10 overflow-hidden text-sm">
+    <div
+      class="bg-gold px-4 py-2 font-bold whitespace-nowrap h-full flex items-center z-10 shadow-[2px_0_10px_rgba(0,0,0,0.2)]">
+      آخر الأخبار
+    </div>
+    <div class="flex-1 ticker-wrap h-full flex items-center bg-[#05302c]">
+      <div class="ticker-move">
+        <!-- النسخة الأولى من الأخبار -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="sabr.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين للصف
+            السابع للعام
+            الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة
+            الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="expo.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة المتفوقين
+            الاولى في اللاذقية في تاريخ
+            29/8/2026</a>
+        </div>
+
+        <!-- النسخة الثانية -->
+        <div class="flex items-center whitespace-nowrap">
+          <span class="text-gold-light mx-4">•</span>
+          <a href="sabr.html" class="hover:text-gold-light transition-colors">انطلاق دورات تدريبية لسبر المتفوقين للصف
+            السابع للعام
+            الدراسي2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل على مستوى
+            الجمهورية العربية السورية في شهادة
+            الثانوية العامة لعام 2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="achievements.html" class="hover:text-gold-light transition-colors">تكريم الطلاب الاوائل في الصف
+            التاسع لعام2025/2026</a>
+
+          <span class="text-gold-light mx-4">•</span>
+          <a href="expo.html" class="hover:text-gold-light transition-colors">انطلاق المعرض العلمي لمدرسة المتفوقين
+            الاولى في اللاذقية في تاريخ
+            29/8/2026</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="bg-gradient-to-br from-primary via-dark to-[#042828] text-white py-12 relative">
+    <div class="text-center mb-3">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">الأنشطة والفعاليات المدرسية</h1>
+      <p class="text-gold-light text-lg md:text-base max-w-xl mx-auto">نحرص في مدرسة المتفوقين على بناء شخصية الطالب
+        المتكاملة من خلال الأنشطة العلمية، الثقافية، والنوادي الإثرائية.</p>
+    </div>
+  </section>
+
+  <!-- قسم الأنشطة الرئيسية -->
+  <section class="py-9">
+    <main class="container mx-auto px-4 max-w-10xl">
+      <section class="mb-20">
+        <h3 class="text-2xl font-bold text-primary mb-8 border-r-4 border-gold pr-3">
+          الأنشطة الرئيسية والبرامج الإثرائية
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- بطولة المناظرات -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-premium hover:-translate-y-1 transition duration-300 flex flex-col">
+            <a href="debate.html" class="relative h-56 overflow-hidden block">
+              <img src="assets/غلاف بطولة المناظرات.webp" alt="بطولة المناظرات"
+                class="w-full h-full object-contain hover:scale-105 transition duration-500" />
+              <span class="absolute bottom-3 right-3 bg-gold text-dark text-xs px-3 py-1 rounded-full font-bold">انقر
+                للانتقال للقسم</span>
+            </a>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-3">
+                  بطولة المناظرات المدرسية
+                </h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  منافسة فكرية رفيعة تدرب الطلاب على فن الحوار البنّاء،
+                  التفكير النقدي، صياغة الحجج المنطقية، والخطابة أمام الجمهور
+                  لتطوير مهارات التواصل القيادية.
+                </p>
+              </div>
+              <a href="debate.html"
+                class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-4 rounded-lg transition text-sm text-center block">
+                عرض التفاصيل الكاملة
+              </a>
+            </div>
+          </div>
+
+          <!-- المعرض العلمي -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-premium hover:-translate-y-1 transition duration-300 flex flex-col">
+            <a href="expo.html" class="relative h-56 overflow-hidden block">
+              <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop"
+                alt="المعرض العلمي" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute bottom-3 right-3 bg-gold text-dark text-xs px-3 py-1 rounded-full font-bold">انقر
+                للانتقال للقسم</span>
+            </a>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-3">
+                  المعرض العلمي السنوي
+                </h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  حدث سنوي بارز يستعرض ابتكارات الطلاب، المشاريع الفيزيائية
+                  والكيميائية، النماذج الهندسية والتطبيقية، والتجارب التفاعلية
+                  التي تعكس التميز الأكاديمي.
+                </p>
+              </div>
+              <a href="expo.html"
+                class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-4 rounded-lg transition text-sm text-center block">
+                عرض التفاصيل الكاملة
+              </a>
+            </div>
+          </div>
+
+          <!-- دورات سبر المتفوقين -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-premium hover:-translate-y-1 transition duration-300 flex flex-col">
+            <a href="sabr.html" class="relative h-56 overflow-hidden block">
+              <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&auto=format&fit=crop"
+                alt="دورات سبر المتفوقين" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+              <span class="absolute bottom-3 right-3 bg-gold text-dark text-xs px-3 py-1 rounded-full font-bold">انقر
+                للانتقال للقسم</span>
+            </a>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-xl font-bold text-dark mb-3">
+                  دورات تدريبية لسبر المتفوقين (الصف السابع)
+                </h4>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                  برنامج تأهيلي مكثف موجه لطلاب الصف السابع لإعدادهم لاختبارات
+                  قبول مدرسة المتفوقين، يركز على نمذجة أسئلة الذكاء والتفكير
+                  الرياضي والعلوم.
+                </p>
+              </div>
+              <a href="sabr.html"
+                class="bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 px-4 rounded-lg transition text-sm text-center block">
+                عرض التفاصيل الكاملة
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- قسم النوادي المدرسية -->
+      <section>
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 border-r-4 border-gold pr-3">
+          <div>
+            <h3 class="text-2xl font-bold text-primary">
+              النوادي المدرسية المتخصصة
+            </h3>
+            <p class="text-gray-500 text-sm mt-1">
+              اضغط على أي نادي للانتقال إلى الصفحة الخاصة به
+            </p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- نادي البرمجة -->
+          <a href="programming.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&auto=format&fit=crop"
+                alt="نادي البرمجة" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              نادي البرمجة
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              تطوير البرمجيات والتفكير البرمجي
+            </p>
+          </a>
+
+          <!-- نادي السينما -->
+          <a href="cinema.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop"
+                alt="نادي السينما" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              نادي السينما
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              تحليل الأفلام وتنسيق العروض
+            </p>
+          </a>
+
+          <!-- نادي اللغات -->
+          <a href="languages.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=500&auto=format&fit=crop"
+                alt="نادي اللغات" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              نادي اللغات
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              المحادثة والتبادل الثقافي
+            </p>
+          </a>
+
+          <!-- نادي كرة السلة -->
+          <a href="basketball.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&auto=format&fit=crop"
+                alt="نادي كرة السلة" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              نادي كرة السلة
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">اللياقة والعمل الجماعي</p>
+          </a>
+
+          <!-- النادي البيئي -->
+          <a href="environment.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&auto=format&fit=crop"
+                alt="النادي البيئي" class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              النادي البيئي
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">استدامة وحماية البيئة</p>
+          </a>
+
+          <!-- ورشة رسم وألوان -->
+          <a href="art.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop"
+                alt="ورشة رسم وألوان"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              ورشة رسم وألوان
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              الفنون التشكيلية والتعبير البصري
+            </p>
+          </a>
+
+          <!-- كورال العزف والغناء -->
+          <a href="music.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop"
+                alt="كورال العزف والغناء"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              كورال العزف والغناء
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              التذوق الموسيقي والأداء الجماعي
+            </p>
+          </a>
+
+          <!-- نادي القراءة والمناظرة -->
+          <a href="reading.html"
+            class="group bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-premium transition text-center block">
+            <div class="h-40 rounded-lg overflow-hidden mb-3 relative">
+              <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&auto=format&fit=crop"
+                alt="نادي القراءة والمناظرة"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-300" />
+            </div>
+            <h4 class="font-bold text-lg text-dark group-hover:text-primary transition">
+              نادي القراءة والمناظرة
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              مطالعة الكتب والجلسات الحوارية
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-16 pb-8 border-t-4 border-gold mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="logo.jpg" alt="الشعار"
+        class="h-16 mx-auto mb-6 grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100" onerror="
+          this.src =
+            'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=200&auto=format&fit=crop'
+        " />
+      <h4 class="text-xl font-bold mb-2">مدرسة المتفوقين الأولى باللاذقية</h4>
+      <p class="text-gray-400 mb-8">
+        منارة العلم والتميز الأكاديمي والابتكار
+      </p>
+      <div class="flex justify-center gap-6 mb-8 text-sm text-gray-300 flex-wrap font-bold">
+        <a href="index.html" class="hover:text-gold transition-colors">الرئيسية</a>
+        <a href="about.html" class="hover:text-gold transition-colors">عن المدرسة</a>
+        <a href="teachers.html" class="hover:text-gold transition-colors">الكادر التدريسي</a>
+        <a href="activities.html" class="hover:text-gold transition-colors">النشاطات</a>
+        <a href="volunteer.html" class="hover:text-gold transition-colors">الفريق التطوعي</a>
+        <a href="achievements.html" class="hover:text-gold transition-colors">الإنجازات</a>
+        <a href="contact.html" class="hover:text-gold transition-colors">تواصل معنا</a>
+      </div>
+      <p class="text-sm text-gray-500 font-english">
+        جميع الحقوق محفوظة © مدرسة المتفوقين الأولى باللاذقية 1998 - 2026
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
