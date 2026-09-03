@@ -28,6 +28,7 @@
     };
   </script>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/jpg" href="logo.jpg" />
 </head>
 
 <body class="bg-soft text-dark flex flex-col min-h-screen font-arabic">
@@ -169,7 +170,7 @@
           class="bg-white p-4 rounded-xl shadow-premium border border-gray-100 flex flex-col items-center text-center w-full sm:w-48">
           <div
             class="w-24 h-24 mb-3 rounded-lg overflow-hidden bg-gray-100 border-2 border-gold flex items-center justify-center text-gray-400">
-            <img src="" alt="أ.جميل يوسف" class="w-full h-full object-cover"
+            <img src="assets/المدير.webp" alt="أ.جميل يوسف" class="w-full h-full object-cover"
               onerror="this.src='https://via.placeholder.com/100?text=صورة'" />
           </div>
           <span class="text-xs bg-gold/10 text-gold-light font-bold px-2 py-0.5 rounded mb-1">المشرف العام</span>
@@ -243,12 +244,12 @@
 
         <script>
           const members = [
-            { name: "ماري نادر عبدالله", photo: "assets/ماري_عبدالله.jpg" },
-            { name: "زين خلدون حداد", photo: "assets/زين_حداد.jpg" },
+            { name: "ماري نادر عبدالله", photo: "assets/empty.png" },
+            { name: "زين خلدون حداد", photo: "assets/empty.png" },
             { name: "نبيل اوس علي", photo: "assets/نبيل_علي.jpg" },
             { name: "جولي زهرة", photo: "assets/جولي_زهرة.jpg" },
             { name: "محمد سمير صادق الحموي", photo: "assets/محمد_الحموي.jpg" },
-            { name: "فارس حواط", photo: "assets/فارس_حواط.jpg" },
+            { name: "فارس حواط", photo: "assets/empty.png" },
             { name: "علي سامر فضة", photo: "assets/علي_فضة.jpg" },
             { name: "احمد برهان مسعود", photo: "assets/احمد_مسعود.jpg" },
             { name: "محمد جواد مقصود", photo: "assets/محمد_مقصود.jpg" },
@@ -257,27 +258,27 @@
             { name: "لين جلال مكاوي", photo: "assets/لين_مكاوي.jpg" },
             { name: "سارة احمد علي", photo: "assets/سارة_علي.jpg" },
             { name: "هيا ناصر عبود", photo: "assets/هيا_عبود.jpg" },
-            { name: "يحيى تمام عباس", photo: "assets/يحيى_عباس.jpg" },
+            { name: "يحيى تمام عباس", photo: "assets/empty.png" },
             { name: "لامار مروة", photo: "assets/لامار_مروة.jpg" },
             { name: "زين العابدين غاندي قره فلاح", photo: "assets/زين_قرة.jpg" },
             { name: "ريان أكرم زين الدين", photo: "assets/ريان_زين.jpg" },
             { name: "فريد باسم هارون", photo: "assets/فريد_هارون.jpg" },
-            { name: "اية مصطفى عابده", photo: "assets/اية_عابدة.jpg" },
+            { name: "اية مصطفى عابده", photo: "assets/empty.png" },
             { name: "شام مهند خضور", photo: "assets/شام_خضور.jpg" },
             { name: "عبد اللطيف يعرب سلوم", photo: "assets/عبداللطيف_سلوم.jpg" },
-            { name: "حمزة سليمان الاحمد", photo: "assets/حمزة_الاحمد.jpg" },
+            { name: "حمزة سليمان الاحمد", photo: "assets/empty.png" },
             { name: "شفيق عزت حسن", photo: "assets/شفيق_حسن.jpg" },
             { name: "ناي ايهم دياب", photo: "assets/ناي_دياب.jpg" },
-            { name: "نور شادي اسماعيل", photo: "assets/نور_اسماعيل.jpg" },
-            { name: "كاترين قحطان عاقل", photo: "assets/كاترين_عاقل.jpg" },
-            { name: "رغد فيصل هيفا", photo: "assets/رغد_هيفا.jpg" },
-            { name: "لوتس رياض الصاوي", photo: "assets/لوتس_الصاوي.jpg" }
+            { name: "نور شادي اسماعيل", photo: "assets/empty.png" },
+            { name: "كاترين قحطان عاقل", photo: "assets/empty.png" },
+            { name: "رغد فيصل هيفا", photo: "assets/empty.png" },
+            { name: "لوتس رياض الصاوي", photo: "assets/empty.png" }
           ];
 
           document.write(members.map(member => `
     <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center transition hover:shadow-md">
       <div class="w-16 h-16 sm:w-20 sm:h-20 mb-2 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
-        <img src="${member.photo}" alt="${member.name}" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/80/0F5F58/FFFFFF?text=صورة'" />
+        <img src="${member.photo}" alt="${member.name}" class="w-full h-full object-cover" onerror="" />
       </div>
       <h4 class="font-bold text-xs sm:text-sm text-dark leading-tight mt-1">${member.name}</h4>
     </div>
